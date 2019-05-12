@@ -1,14 +1,7 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  OnDestroy,
-  OnInit,
-  ViewChild
-} from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { DataService } from '@app/services/data.service';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { map, share, takeUntil } from 'rxjs/operators';
-import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-base',
