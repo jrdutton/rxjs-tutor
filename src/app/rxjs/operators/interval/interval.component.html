@@ -1,0 +1,16 @@
+<fieldset class="border p-2">
+  <legend class="w-auto">Interval</legend>
+  <div class="row">
+    <div class="col-2">
+      <form [formGroup]="fg">
+        <label>Period (milliseconds)</label>
+        <input class="form-control" formControlName="period" />
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="value" *ngFor="let value of values">{{ value }}</span>
+    </div>
+  </div>
+</fieldset>

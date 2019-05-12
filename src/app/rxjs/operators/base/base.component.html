@@ -1,0 +1,33 @@
+<fieldset class="border p-2">
+  <legend class="w-auto">{{ title }}</legend>
+  <p>{{ description }}</p>
+  <div class="row">
+    <div class="col-2">
+      <button
+        #colorButton
+        type="button"
+        class="btn btn-block"
+        [ngClass]="colorIn"
+      >
+        COLOUR
+      </button>
+    </div>
+    <div class="col-2">
+      <button #iconButton type="button" class="btn btn-block btn-light">
+        ICON&nbsp;<fa-icon
+          [icon]="['fas', '' + iconIn + '']"
+          size="1x"
+        ></fa-icon>
+      </button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-block" [ngClass]="colorOut">
+        {{ title.toUpperCase() }}&nbsp;<fa-icon
+          [icon]="['fas', '' + iconOut + '']"
+          size="1x"
+        ></fa-icon>
+      </button>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</fieldset>

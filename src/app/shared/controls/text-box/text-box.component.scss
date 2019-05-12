@@ -1,0 +1,37 @@
+$text-width-s: 5rem;
+$text-width-m: 11.25rem;
+$text-width-l: 18.75rem;
+$text-width-xl: 28.13rem;
+
+:host-context(.keep-error-space) {
+  .error-container {
+    display: block;
+    height: 1em;
+    margin-top: 4px;
+  }
+}
+
+:host-context(.text-width-s) {
+  input {
+    max-width: $text-width-s;
+  }
+}
+
+:host-context(.text-width-m) {
+  input {
+    max-width: $text-width-m;
+  }
+}
+
+:host-context(.text-width-l) {
+  input {
+    max-width: $text-width-l;
+  }
+}
+
+label > span {
+  display: inline;
+  font-size: 0.75em;
+  font-weight: normal;
+  margin-left: 0.4em;
+}

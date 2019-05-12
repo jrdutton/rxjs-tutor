@@ -1,0 +1,26 @@
+<label [attr.for]="getId()"
+  >{{ title }}<span *ngIf="subtitle">{{ subtitle }}</span></label
+>
+<input
+  [type]="type"
+  [id]="getId()"
+  class="form-control"
+  [attr.maxlength]="maxLength"
+  [attr.aria-invalid]="isInvalid()"
+  [ngClass]="{ 'is-invalid': isInvalid() }"
+  [value]="value"
+  (input)="setText($event.target.value)"
+  (blur)="onTouched()"
+  [disabled]="disabled"
+  #input
+/>
+<div
+  [ngClass]="{ 'invalid-feedback': isInvalid() }"
+  class="error-container"
+  role="alert"
+  aria-atomic="true"
+>
+  <ng-container *ngFor="let errorMessage of errorMessages()">
+    {{ errorMessage }}
+  </ng-container>
+</div>
