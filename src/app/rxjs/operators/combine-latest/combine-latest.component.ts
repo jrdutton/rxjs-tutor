@@ -8,7 +8,7 @@ import { BaseComponent } from '../base/base.component';
   styleUrls: ['./combine-latest.component.scss']
 })
 export class CombineLatestComponent implements AfterViewInit {
-  @ViewChild(BaseComponent) baseComponent: BaseComponent;
+  @ViewChild(BaseComponent, { static: true }) baseComponent: BaseComponent;
 
   constructor() {}
 

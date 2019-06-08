@@ -8,7 +8,7 @@ import { BaseComponent } from '../base/base.component';
   styleUrls: ['./fork-join.component.scss']
 })
 export class ForkJoinComponent implements AfterViewInit {
-  @ViewChild(BaseComponent) baseComponent: BaseComponent;
+  @ViewChild(BaseComponent, { static: true }) baseComponent: BaseComponent;
 
   constructor() {}
 

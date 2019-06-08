@@ -23,8 +23,8 @@ export class BaseComponent implements OnInit, OnDestroy {
 
   private ngUnsubscribe: Subject<any> = new Subject();
 
-  @ViewChild('colorButton') colorButton: ElementRef;
-  @ViewChild('iconButton') iconButton: ElementRef;
+  @ViewChild('colorButton', { static: true }) colorButton: ElementRef;
+  @ViewChild('iconButton', { static: true }) iconButton: ElementRef;
 
   constructor(private dataService: DataService) {}
 

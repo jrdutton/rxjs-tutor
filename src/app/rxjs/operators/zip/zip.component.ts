@@ -8,7 +8,7 @@ import { BaseComponent } from '../base/base.component';
   styleUrls: ['./zip.component.scss']
 })
 export class ZipComponent implements AfterViewInit {
-  @ViewChild(BaseComponent) baseComponent: BaseComponent;
+  @ViewChild(BaseComponent, { static: true }) baseComponent: BaseComponent;
 
   constructor() {}
 

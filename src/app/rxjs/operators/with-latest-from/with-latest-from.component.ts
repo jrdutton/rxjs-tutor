@@ -8,7 +8,7 @@ import { BaseComponent } from '../base/base.component';
   styleUrls: ['./with-latest-from.component.scss']
 })
 export class WithLatestFromComponent implements AfterViewInit {
-  @ViewChild(BaseComponent) baseComponent: BaseComponent;
+  @ViewChild(BaseComponent, { static: true }) baseComponent: BaseComponent;
 
   constructor() {}
 
