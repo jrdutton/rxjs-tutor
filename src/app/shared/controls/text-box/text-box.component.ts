@@ -7,8 +7,7 @@ import { BaseControlValueAccessor } from '../base-control-value-accessor';
   templateUrl: './text-box.component.html',
   styleUrls: ['./text-box.component.scss']
 })
-export class TextBoxComponent extends BaseControlValueAccessor<string>
-  implements OnInit {
+export class TextBoxComponent extends BaseControlValueAccessor<string> implements OnInit {
   @Input()
   type = 'text';
 
@@ -37,16 +36,14 @@ export class TextBoxComponent extends BaseControlValueAccessor<string>
   ngOnInit(): void {
     if (this.pattern) {
       const ctrl = this.controlDir.control;
-      const validators = ctrl.validator
-        ? [ctrl.validator, Validators.pattern(this.pattern)]
-        : Validators.pattern(this.pattern);
+      const validators = ctrl.validator ? [ctrl.validator, Validators.pattern(this.pattern)] : Validators.pattern(this.pattern);
       ctrl.setValidators(validators);
       ctrl.updateValueAndValidity();
     }
   }
 
   getId() {
-    return this.controlDir.name.toLowerCase() + '-id';
+    return this.controlDir.name.toString().toLowerCase() + '-id';
   }
 
   isInvalid(): boolean {
